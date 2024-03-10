@@ -1,0 +1,11 @@
+{
+    "cSpell.words": [
+        "aabb",
+        "gameplay",
+        "spritesheet"
+    ],
+    "rust-analyzer.linkedProjects": [
+        "./Cargo.toml",
+        "./Cargo.toml"
+    ]
+}
