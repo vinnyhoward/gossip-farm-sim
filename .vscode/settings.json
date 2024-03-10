@@ -1,11 +1,22 @@
 {
     "cSpell.words": [
         "aabb",
+        "bindgen",
+        "convo",
+        "cooldown",
+        "despawn",
+        "egui",
         "gameplay",
-        "spritesheet"
+        "spritesheet",
+        "Spritesheets",
+        "Vsync"
     ],
     "rust-analyzer.linkedProjects": [
         "./Cargo.toml",
+        "./Cargo.toml",
+        "./Cargo.toml",
+        "./Cargo.toml",
         "./Cargo.toml"
-    ]
+    ],
+    "rust-analyzer.showUnlinkedFileNotification": false
 }

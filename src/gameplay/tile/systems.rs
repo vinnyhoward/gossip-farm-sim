@@ -1,5 +1,7 @@
 // packages
-use bevy::sprite::collide_aabb::collide;
+// replace collide_aabb with "sprite::collide_aabb::Collision"
+// https://bevyengine.org/examples/Games/breakout/
+// use bevy::sprite::collide_aabb::collide;
 use csv::Reader;
 use std::fs::File;
 use std::str::FromStr;
@@ -162,7 +164,7 @@ pub fn spawn_water(mut commands: Commands, water_sheet: Res<WaterSpriteSheet>) {
 }
 
 pub fn water_sprite_animation(
-    mut query: Query<(&mut TextureAtlasSprite, &mut WaterSpriteAnimation)>,
+    mut query: Query<(&mut TextureAtlas, &mut WaterSpriteAnimation)>,
     time: Res<Time>,
 ) {
     for (mut sprite, mut animation) in query.iter_mut() {
@@ -181,15 +183,15 @@ pub fn basic_wall_collision_check(
     wall_query: &Query<&Transform, (With<BasicTileCollider>, Without<EtherPet>)>,
 ) -> bool {
     for wall_transform in wall_query.iter() {
-        let collision = collide(
-            target_player_pos,
-            Vec2::splat(TILE_SIZE * 0.01),
-            wall_transform.translation,
-            Vec2::splat(TILE_SIZE),
-        );
-        if collision.is_some() {
-            return false;
-        }
+        // let collision = collide(
+        //     target_player_pos,
+        //     Vec2::splat(TILE_SIZE * 0.01),
+        //     wall_transform.translation,
+        //     Vec2::splat(TILE_SIZE),
+        // );
+        // if collision.is_some() {
+        //     return false;
+        // }
     }
     true
 }
